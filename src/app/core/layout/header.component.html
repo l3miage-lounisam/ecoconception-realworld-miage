@@ -5,17 +5,13 @@
     <!-- Show this for logged out users -->
     <ul *appShowAuthed="false" class="nav navbar-nav pull-xs-right">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/"> Home </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login" routerLinkActive="active">
+        <a class="nav-link" routerLink="/register" routerLinkActive="active">
           Sign in
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/register" routerLinkActive="active">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">
           Sign up
         </a>
       </li>
@@ -23,29 +19,6 @@
 
     <!-- Show this for logged in users -->
     <ul *appShowAuthed="true" class="nav navbar-nav pull-xs-right">
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          routerLink="/"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          Home
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/editor" routerLinkActive="active">
-          <i class="ion-compose"></i>&nbsp;New Article
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/settings" routerLinkActive="active">
-          <i class="ion-gear-a"></i>&nbsp;Settings
-        </a>
-      </li>
-
       <li class="nav-item" *ngIf="currentUser$ | async as currentUser">
         <a
           class="nav-link"

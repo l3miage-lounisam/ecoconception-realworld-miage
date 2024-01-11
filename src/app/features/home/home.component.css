@@ -5,3 +5,10 @@
 .tag-pill {
   cursor: pointer;
 }
+
+.custom-text {
+  font-family: 'Cursive', cursive;
+  font-style: italic;
+  font-weight: bold;
+}
+
